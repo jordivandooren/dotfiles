@@ -36,9 +36,6 @@ fi
 # set keyboard variant to dvorak-programmer
 setxkbmap -variant dvp
 
-# set acceleration speed of trackpoint
-xinput --set-prop 13 'libinput Accel Speed' 1
-
 twm &
 xclock -geometry 50x50-1+1 &
 xterm -geometry 80x50+494+51 &
