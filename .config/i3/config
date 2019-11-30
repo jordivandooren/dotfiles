@@ -16,6 +16,9 @@ font xft:Source Code Pro 10
 # Set acceleration speed of trackpoint.
 exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' 1
 
+# set keyboard variant to dvorak-programmer
+exec --no-startup-id setxkbmap -variant dvp
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 

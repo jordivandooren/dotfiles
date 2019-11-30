@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# copied from /etc/X11/xinitrc and extended to change keyboard variant
+# changes compared to /etc/X11/xinitrc:
+# - start i3 instead of xterm
+
 # for X on startup.
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -33,11 +35,4 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# set keyboard variant to dvorak-programmer
-setxkbmap -variant dvp
-
-twm &
-xclock -geometry 50x50-1+1 &
-xterm -geometry 80x50+494+51 &
-xterm -geometry 80x20+494-0 &
-exec xterm -geometry 80x66+0+0 -name login
+exec i3
