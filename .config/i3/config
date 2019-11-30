@@ -6,6 +6,8 @@
 # - vim direction keys (hjkl) instead of jkl;
 # - $mod+o instead of $mod+h for horizontal split 
 # - Set trackpoint speed
+# - Set keyboard variant to dvorak-programmer
+# - Remove border from windows
 
 set $mod Mod4
 
@@ -18,6 +20,8 @@ exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' 1
 
 # set keyboard variant to dvorak-programmer
 exec --no-startup-id setxkbmap -variant dvp
+
+default_border none
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
