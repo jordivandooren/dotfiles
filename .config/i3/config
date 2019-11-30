@@ -21,7 +21,7 @@ exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' 1
 # set keyboard variant to dvorak-programmer
 exec --no-startup-id setxkbmap -variant dvp
 
-default_border none
+default_border pixel 1
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
