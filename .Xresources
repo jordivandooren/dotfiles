@@ -1,6 +1,6 @@
 ! urxvt -----------------------------------------------------------------------
-! source code pro font
-URxvt*font: xft:Source Code Pro:size=12
+! set font
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=12
 
 ! disable scrollbar
 URxvt*scrollBar: false
