@@ -18,7 +18,7 @@ exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' 1
 exec --no-startup-id setxkbmap -variant dvp
 
 # set small window borders
-default_border pixel 1
+# default_border pixel 1
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
