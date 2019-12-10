@@ -1,9 +1,10 @@
-# keep reference to name of current script to ignore it.
-this=$(basename $BASH_SOURCE)
+# move to parent dir of script
+pushd $(dirname $BASH_SOURCE)
 
 # functions -------------------------------------------------------------------
 find_dotfiles() {
-  find . -type f -not -path "./.git/*" -not -name $this
+  thisfile=$(basename $BASH_SOURCE)
+  find . -type f -not -path "*/.git/*" -not -name $thisfile
 }
 
 make_symlink() {
@@ -13,10 +14,13 @@ make_symlink() {
   if [[ ! -e $target_dir ]]; then
     mkdir -p $target_dir
   fi
-  ln -sf $source $target_dir
+  #ln -sf $source $target_dir
+  echo $source ...... $target_dir
+
 }
 
 # main ------------------------------------------------------------------------
 for file in $(find_dotfiles); do
   make_symlink $file
 done
+popd
