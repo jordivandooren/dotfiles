@@ -14,9 +14,7 @@ make_symlink() {
   if [[ ! -e $target_dir ]]; then
     mkdir -p $target_dir
   fi
-  #ln -sf $source $target_dir
-  echo $source ...... $target_dir
-
+  ln -sf $source $target_dir
 }
 
 # main ------------------------------------------------------------------------
