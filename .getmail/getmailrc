@@ -1,9 +1,9 @@
 [retriever]
-type = SimplePOP3SSLRetriever
-server = pop.gmail.com
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
 username = jordivandooren@gmail.com
 password_command = ("pass", "show", "website/google.com")
-port = 995
+port = 993
 
 [destination]
 type = Maildir
