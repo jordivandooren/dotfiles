@@ -14,11 +14,8 @@ set $mod Mod4
 # Set acceleration speed of trackpoint.
 exec --no-startup-id xinput --set-prop 13 'libinput Accel Speed' 1
 
-# set keyboard variant to dvorak-programmer
+# Set keyboard variant to dvorak-programmer
 exec --no-startup-id setxkbmap -variant dvp
-
-# set small window borders
-# default_border pixel 1
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -129,6 +126,9 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# assign applications to workspaces
+assign [class="qutebrowser"] 2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
