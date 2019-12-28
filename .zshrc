@@ -6,8 +6,6 @@ plugins=(git archlinux wd vi-mode pyenv common-aliases sudo mvn virtualenv)
 DEFAULT_USER=jordi
 prompt_context(){}
 
-export EDITOR='vim'
-
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
