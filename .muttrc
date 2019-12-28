@@ -1,0 +1,7 @@
+set mbox_type=Maildir
+set spoolfile="~/Mail/INBOX"  # startup folder
+set folder="~/Mail/"
+set record="+Sent_Mail"
+set mask=".*"
+set postponed="+Drafts"
+
