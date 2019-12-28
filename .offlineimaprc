@@ -1,0 +1,21 @@
+[general]
+accounts = Main
+pythonfile = ~/.offlineimap.py
+
+[Account Main]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail
+nametrans = to_remote_name
+
+[Repository Remote]
+type = Gmail
+folderfilter = lambda x: to_local_name(x) in ["INBOX", "Sent_Mail"]
+nametrans = to_local_name
+remoteuser = jordivandooren@gmail.com
+remotepasseval = get_pass()
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_type = tlsl_2
