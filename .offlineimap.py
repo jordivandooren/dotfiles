@@ -2,7 +2,7 @@ from subprocess import check_output
 
 
 def get_pass():
-    password = check_output("pass show website/google.com", shell=True)
+    password = check_output("pass website/google.com", shell=True)
     return password
 
 
