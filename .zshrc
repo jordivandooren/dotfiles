@@ -1,7 +1,7 @@
 ZSH=~/.oh-my-zsh/
 ZSH_THEME="agnoster"
 DISABLE_AUTO_UPDATE="true"
-plugins=(git archlinux wd vi-mode pyenv common-aliases sudo mvn virtualenv)
+plugins=(git archlinux wd vi-mode pyenv common-aliases sudo mvn virtualenv pass)
 
 DEFAULT_USER=jordi
 prompt_context(){}
