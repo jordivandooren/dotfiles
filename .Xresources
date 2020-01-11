@@ -1,6 +1,6 @@
 ! urxvt -----------------------------------------------------------------------
 ! set font
-URxvt*font: xft:DejaVu Sans Mono for Powerline:size=12
+URxvt*font: xft:Roboto mono medium for Powerline:size=12
 
 ! disable scrollbar
 URxvt*scrollBar: false
