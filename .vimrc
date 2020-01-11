@@ -16,11 +16,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'powerline/powerline'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 
 " regular settings
 filetype plugin indent on
-colorscheme solarized
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 syntax on
 set autoindent
