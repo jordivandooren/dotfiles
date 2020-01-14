@@ -22,6 +22,7 @@ call vundle#end()
 " regular settings
 filetype plugin indent on
 let g:gruvbox_italic=1
+" set termguicolors
 colorscheme gruvbox
 
 syntax on
