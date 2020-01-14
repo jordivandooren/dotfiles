@@ -200,6 +200,7 @@ bar {
         status_command py3status
         colors {
             background $black
+            statusline $white
             urgent_workspace $red $red $white
             inactive_workspace $black $black $darkwhite
             focused_workspace $blue $blue $black
