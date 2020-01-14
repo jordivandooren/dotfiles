@@ -198,4 +198,10 @@ bindsym $mod+r mode "resize"
 bar {
         font xft:Roboto Mono for Powerline 12
         status_command py3status
+        colors {
+            background $black
+            urgent_workspace $red $red $white
+            inactive_workspace $black $black $darkwhite
+            focused_workspace $blue $blue $black
+        }
 }
