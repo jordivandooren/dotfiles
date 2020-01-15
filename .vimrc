@@ -5,32 +5,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " plugins via vundle
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale'
-Plugin 'lervag/vimtex'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'valloric/youcompleteme'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'powerline/powerline'
-Plugin 'morhetz/gruvbox'
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'jeffkreeftmeijer/vim-dim'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'morhetz/gruvbox'
+  Plugin 'prabirshrestha/async.vim'
+  Plugin 'prabirshrestha/vim-lsp'
+  Plugin 'mattn/vim-lsp-settings'
 call vundle#end()
 
 " regular settings
 filetype plugin indent on
-let g:gruvbox_italic=1
-" set termguicolors
-colorscheme gruvbox
+
+set background=dark
+colorscheme dim
 
 syntax on
 set autoindent
 set expandtab
 set number
 set relativenumber
-set background=dark
 set foldmethod=indent
 set foldlevel=99
 set encoding=utf-8

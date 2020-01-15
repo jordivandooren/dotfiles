@@ -152,10 +152,9 @@ set_from_resource $darkcyan    color6  #000000
 set_from_resource $cyan        color14 #000000
 set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
+set_from_resource $black       color8  #000000
+set_from_resource $darkblack   color0  #000000
 
-# use custom colors for black
-set $black       #282828
-set $darkblack   #1d2021
 set $transparent #00000000
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
@@ -198,11 +197,13 @@ bindsym $mod+r mode "resize"
 bar {
         font xft:Roboto Mono for Powerline 12
         status_command py3status
+
         colors {
-            background $black
+            background $darkblack
             statusline $white
+            separator $darkwhite
             urgent_workspace $red $red $white
-            inactive_workspace $black $black $darkwhite
-            focused_workspace $blue $blue $black
+            inactive_workspace $darkblack $black $darkwhite
+            focused_workspace $blue $blue $darkblack
         }
 }
