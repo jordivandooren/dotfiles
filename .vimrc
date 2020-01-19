@@ -5,14 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " plugins via vundle
 call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'jeffkreeftmeijer/vim-dim'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'morhetz/gruvbox'
-  Plugin 'prabirshrestha/async.vim'
-  Plugin 'prabirshrestha/vim-lsp'
-  Plugin 'mattn/vim-lsp-settings'
 call vundle#end()
 
 " regular settings
@@ -26,9 +18,29 @@ set autoindent
 set expandtab
 set number
 set relativenumber
-set foldmethod=indent
-set foldlevel=99
 set encoding=utf-8
+set hlsearch
+set incsearch
+set smartcase
 
-" for powerline
+" for powerline 
 set laststatus=2
+
+" keybindings 
+let mapleader = ","
+" edit ~/.vimrc
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+" source ~/.vimrc 
+nnoremap <leader>sv :source ~/.vimrc<cr>
+
+" lsp bindings
+nnoremap <leader>ldef :LspDefinition<cr>
+nnoremap <leader>lref :LspReferences<cr>
+nnoremap <leader>lhov :LspHover<cr>
+nnoremap <leader>lren :LspRename<cr>
+" java bindings
+augroup filetype_java
+    autocmd!
+    autocmd FileType java nnoremap <buffer> <leader>; mqA;<esc>`q
+    autocmd FileType java iabbrev <buffer> psvm public static void main(
+augroup END 
