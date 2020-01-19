@@ -4,7 +4,7 @@ pushd $(dirname $BASH_SOURCE)
 # functions -------------------------------------------------------------------
 find_dotfiles() {
   thisfile=$(basename $BASH_SOURCE)
-  find . -type f -not -path "*/.git/*" -not -name $thisfile
+  find . -type f -not -path "*/.git*" -not -name $thisfile
 }
 
 make_symlink() {
