@@ -6,7 +6,6 @@ maxsyncaccounts = 1
 [Account Main]
 localrepository = Local
 remoterepository = Remote
-autorefresh = 1
 
 [Repository Local]
 type = Maildir

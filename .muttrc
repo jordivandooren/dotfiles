@@ -4,4 +4,3 @@ set folder="~/Mail/"
 set record="+Sent_Mail"
 set mask=".*"
 set postponed="+Drafts"
-

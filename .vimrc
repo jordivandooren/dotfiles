@@ -1,46 +1,40 @@
-" required for vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+" plugin management
+call pathogen#infect()
 
-" plugins via vundle
-call vundle#begin()
-call vundle#end()
-
-" regular settings
+" settings
 filetype plugin indent on
-
-set background=dark
-colorscheme dim
-
-syntax on
+syntax enable
 set autoindent
+set number relativenumber
 set expandtab
-set number
-set relativenumber
 set encoding=utf-8
-set hlsearch
-set incsearch
 set smartcase
+set smarttab
+set backspace=indent,eol,start
+set hlsearch incsearch
+set background=dark
+set ttimeout ttimeoutlen=100
+set ruler
+set showcmd
+set wildmenu
 
 " for powerline 
 set laststatus=2
 
 " keybindings 
 let mapleader = ","
-" edit ~/.vimrc
-nnoremap <leader>ev :vsplit ~/.vimrc<cr>
-" source ~/.vimrc 
-nnoremap <leader>sv :source ~/.vimrc<cr>
+nnoremap <leader>ev :<c-u>vsplit ~/.vimrc<cr>
+nnoremap <leader>sv :<c-u>source ~/.vimrc<cr>
+nnoremap <leader>he :<c-u>help 
+nnoremap <leader>nh :<c-u>nohl<cr>
+nnoremap <leader>db :<c-u>debug<cr>
 
 " lsp bindings
-nnoremap <leader>ldef :LspDefinition<cr>
-nnoremap <leader>lref :LspReferences<cr>
-nnoremap <leader>lhov :LspHover<cr>
-nnoremap <leader>lren :LspRename<cr>
-" java bindings
-augroup filetype_java
-    autocmd!
-    autocmd FileType java nnoremap <buffer> <leader>; mqA;<esc>`q
-    autocmd FileType java iabbrev <buffer> psvm public static void main(
-augroup END 
+nmap <leader>ldef <Plug>(lsp-definition)
+nmap <leader>lref <Plug>(lsp-references)
+nmap <leader>lhov <Plug>(lsp-hover)
+nmap <leader>lren <Plug>(lsp-rename)
+
+" r
+iabbrev arrow <-
+iabbrev pipe %>%
